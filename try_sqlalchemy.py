@@ -7,8 +7,8 @@ def connect():
     
     try:
         engine = db.create_engine("postgresql://postgres:777999Pg@localhost:5432/postgres")
-        engine.echo = True  # We want to see the SQL we're creating
-        connection = engine.connect()
+        # engine.echo = True  # We want to see the SQL we're creating
+        # connection = engine.connect()
         metadata = db.MetaData()
         log2 = db.Table('test_log2', metadata, autoload=True, autoload_with=engine, schema='test')
 
